@@ -1,0 +1,29 @@
+{
+  "1": {
+    "inputs": {
+      "low_threshold": 0.31,
+      "high_threshold": 0.7000000000000001,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Canny"
+  },
+  "2": {
+    "inputs": {
+      "image": "33903_original (3).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "3": {
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  }
+}
