@@ -1,3 +1,4 @@
+import time
 import telebot
 from typing import Final
 import os
@@ -9,7 +10,7 @@ import requests
 TOKEN: Final = '6045352877:AAESQ-r1Af5mH2GFXpNkIL4Gzo7jO8RMQQw'
 BOT_USERNAME: Final = '@aclskjvouwqBot'
 OUTPUT_FOLDER: Final = 'C:\\ComfyUI_windows_portable\\ComfyUI\\output'
-INPUT_FOLDER: Final = '/mnt/c/ComfyUI_windows_portable/ComfyUI/input'
+INPUT_FOLDER: Final = 'C:\\ComfyUI_windows_portable\\ComfyUI\\input'
 URL: Final = "http://127.0.0.1:8188/prompt"
 
 
@@ -55,8 +56,7 @@ def send_prompt(prompt_workflow):
   print('sending prompt...')
   p = {"prompt": prompt_workflow}
   data = json.dumps(p).encode('utf-8')
-  with requests.post(URL, data=data):
-    print('prompt sent!')
+  requests.post(URL, data=data)
   
 
 @bot.message_handler(commands=['canny'])
@@ -75,14 +75,29 @@ def canny_something(message):
   print(fileName)
   with open("canny.json", "r") as file_json:
       print('opening json...')
-      prompt = json.load(file_json)        
+      prompt = json.load(file_json) 
+
   username = message.from_user.username
-  prompt["2"]["inputs"]["image"] = f"{username}/{fileName}"
-  # send_prompt(prompt)
-  print('sending prompt...')
+  prompt["2"]["inputs"]["image"] = f"{username}\\{fileName}"
+  prev_last_image = get_latest_image(OUTPUT_FOLDER)
+  send_prompt(prompt)
+  senend_image(message, prev_last_image)
 
 
-# async def senend_image(message, filename):
+def get_latest_image(folder, operation_name='canny'):
+    files = os.listdir(folder)
+    image_files = [f for f in files if f.lower().__contains__(operation_name)]
+    image_files.sort(key=lambda x: os.path.getmtime(os.path.join(folder, x)))
+    latest_image = os.path.join(folder, image_files[-1]) if image_files else None
+    return latest_image
+
+def senend_image(message, prev_last_image):
+  while True:
+    latest_image = get_latest_image(OUTPUT_FOLDER)
+    if latest_image != prev_last_image:
+      bot.send_photo(message.chat.id, open(latest_image, 'rb'))
+      return latest_image
+    time.sleep(1) 
   
 
 def main():
