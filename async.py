@@ -1,10 +1,11 @@
 import time
-import telebot
+from telebot.async_telebot import AsyncTeleBot
 from typing import Final
 import os
 import datetime
 import json
 import requests
+import asyncio
 
 
 TOKEN: Final = '6045352877:AAESQ-r1Af5mH2GFXpNkIL4Gzo7jO8RMQQw'
@@ -13,14 +14,14 @@ OUTPUT_FOLDER: Final = 'C:\\ComfyUI_windows_portable\\ComfyUI\\output'
 INPUT_FOLDER: Final = 'C:\\ComfyUI_windows_portable\\ComfyUI\\input'
 URL: Final = "http://127.0.0.1:8188/prompt"
 
-MODEL_LIST  = { # json_name: input_id, prompt_id
-  "canny": ["2", None],
-  "animerge": ["81", "26"]
+MODEL_LIST  = { # json_name: input_id
+  "canny": "2",
+  "animerge": "81"
 }
 
 
 # Create a new bot instance
-bot = telebot.TeleBot(TOKEN)
+bot = AsyncTeleBot(TOKEN)
 
 
 
@@ -33,11 +34,11 @@ def send_welcome(message):
 def handle_docs_photo(message):
   bot.reply_to(message, "Похуй абсолютно")
 
-@bot.message_handler(commands=list(MODEL_LIST.keys()))
-def model_handler(message):
+@bot.message_handler(commands=MODEL_LIST.keys())
+async def model_handler(message):
   bot.reply_to(message, 'send me pic')
   json_name = message.text[1:]
-  bot.register_next_step_handler(message, generator, json_name=json_name)
+  await bot.register_message_handler(message, generator, json_name=json_name)
 
 
 def download_image(message, json_name) -> str:
@@ -89,23 +90,29 @@ def generator(message, json_name):
       prompt = json.load(file_json)
   
   username = message.from_user.username
-
-
-  prompt[MODEL_LIST[json_name][0]]["inputs"]["image"] = f"{username}\\{fileName}"
-  if MODEL_LIST[json_name][1] != None:
-    bot.reply_to(message, "send me prompt if u wanna to")
-    bot.register_next_step_handler(message, prompt_handler, prompt=prompt, json_name=json_name)
-  else:
-   
-    prev_last_image = get_latest_image(OUTPUT_FOLDER, json_name=json_name)
-    send_prompt(prompt)
-    send_image(message, prev_last_image, json_name)
-
-def prompt_handler(message, prompt, json_name):
-  prompt[MODEL_LIST[json_name][1]]["inputs"]["text"] = message.text
+  prompt[loadID[json_name]]["inputs"]["image"] = f"{username}\\{fileName}"
   prev_last_image = get_latest_image(OUTPUT_FOLDER, json_name=json_name)
   send_prompt(prompt)
   send_image(message, prev_last_image, json_name)
+
+def canny_something(message):
+  if message.photo is None:
+    bot.reply_to(message, "Ты мне мозги не еби да")
+    return
+  bot.reply_to(message, "Thanks for the photo! I'll take that")
+  fileName = download_image(message, json_name='canny')
+
+  print(fileName)
+  with open("canny.json", "r") as file_json:
+      print('opening json...')
+      prompt = json.load(file_json) 
+
+  username = message.from_user.username
+  prompt["2"]["inputs"]["image"] = f"{username}\\{fileName}"
+  prev_last_image = get_latest_image(OUTPUT_FOLDER, json_name=file_json)
+  send_prompt(prompt)
+  send_image(message, prev_last_image)
+
 
 def get_latest_image(folder, json_name='canny'):
     files = os.listdir(folder)
@@ -125,7 +132,7 @@ def send_image(message, prev_last_image, json_name):
 
 def main():
   print("ну че ебаный рот погнали нахуй")
-  bot.polling()
+  asyncio.run(bot.polling())
 
 
 if __name__ == "__main__":
