@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "low_threshold": 0.31,
+      "low_threshold": 0.3,
       "high_threshold": 0.7000000000000001,
       "image": [
         "2",
@@ -17,13 +17,14 @@
     },
     "class_type": "LoadImage"
   },
-  "3": {
+  "7": {
     "inputs": {
+      "filename_prefix": "canny",
       "images": [
         "1",
         0
       ]
     },
-    "class_type": "PreviewImage"
+    "class_type": "SaveImage"
   }
 }
