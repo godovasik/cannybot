@@ -56,7 +56,7 @@
   },
   "27": {
     "inputs": {
-      "text": "verybadimagenegative_v1.3",
+      "text": "(embedding:verybadimagenegative_v1.3:0.85)",
       "clip": [
         "19",
         1
@@ -126,15 +126,6 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
-    }
-  },
-  "107": {
-    "inputs": {
-      "seed": 124574078853075
-    },
-    "class_type": "Seed Generator",
-    "_meta": {
-      "title": "Seed Generator"
     }
   },
   "114": {

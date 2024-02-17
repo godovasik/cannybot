@@ -1,0 +1,144 @@
+{
+  "95": {
+    "inputs": {
+      "control_net_name": "control_v11f1e_sd15_tile.pth"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "97": {
+    "inputs": {
+      "image": "photo_2024-01-09_21-52-00 (3) (1).jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "98": {
+    "inputs": {
+      "ckpt_name": "flat2DAnimerge_v45Sharp.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "99": {
+    "inputs": {
+      "text": "a perfect anime illustration",
+      "clip": [
+        "98",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "100": {
+    "inputs": {
+      "text": "(embedding:FastNegativeV2:1.0), text, ",
+      "clip": [
+        "98",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "101": {
+    "inputs": {
+      "seed": 803306582473587,
+      "steps": 20,
+      "cfg": 5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "98",
+        0
+      ],
+      "positive": [
+        "108",
+        0
+      ],
+      "negative": [
+        "108",
+        1
+      ],
+      "latent_image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "102": {
+    "inputs": {
+      "samples": [
+        "101",
+        0
+      ],
+      "vae": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "103": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "106": {
+    "inputs": {
+      "width": [
+        "123",
+        0
+      ],
+      "height": [
+        "123",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "108": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "99",
+        0
+      ],
+      "negative": [
+        "100",
+        0
+      ],
+      "control_net": [
+        "95",
+        0
+      ],
+      "image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced"
+  },
+  "117": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "123": {
+    "inputs": {
+      "image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "Get Image Size"
+  }
+}

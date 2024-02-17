@@ -1,0 +1,250 @@
+** ComfyUI startup time: 2024-02-03 15:59:38.339656
+[2024-02-03 15:59] ** Platform: Windows
+[2024-02-03 15:59] ** Python version: 3.11.6 (tags/v3.11.6:8b6ee5b, Oct  2 2023, 14:57:12) [MSC v.1935 64 bit (AMD64)]
+[2024-02-03 15:59] ** Python executable: C:\ComfyUI_windows_portable\python_embeded\python.exe
+[2024-02-03 15:59] ** Log path: C:\bots\cannybot\comfyui.log
+[2024-02-03 15:59] 
+Prestartup times for custom nodes:
+[2024-02-03 15:59]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Manager
+[2024-02-03 15:59] 
+[2024-02-03 15:59] Total VRAM 4096 MB, total RAM 24450 MB
+[2024-02-03 15:59] Trying to enable lowvram mode because your GPU seems to have 4GB or less. If you don't want this use: --normalvram
+[2024-02-03 15:59] Forcing FP16.
+[2024-02-03 15:59] Set vram state to: LOW_VRAM
+[2024-02-03 15:59] Device: cuda:0 NVIDIA GeForce GTX 1050 : cudaMallocAsync
+[2024-02-03 15:59] VAE dtype: torch.float32
+[2024-02-03 15:59] Using pytorch cross attention
+[2024-02-03 15:59] Adding extra search path checkpoints C:\Users\baileyfl\ai\stable-diffusion-webui\models/Stable-diffusion
+[2024-02-03 15:59] Adding extra search path configs C:\Users\baileyfl\ai\stable-diffusion-webui\models/Stable-diffusion
+[2024-02-03 15:59] Adding extra search path vae C:\Users\baileyfl\ai\stable-diffusion-webui\models/VAE
+[2024-02-03 15:59] Adding extra search path loras C:\Users\baileyfl\ai\stable-diffusion-webui\models/Lora
+[2024-02-03 15:59] Adding extra search path loras C:\Users\baileyfl\ai\stable-diffusion-webui\models/LyCORIS
+[2024-02-03 15:59] Adding extra search path upscale_models C:\Users\baileyfl\ai\stable-diffusion-webui\models/ESRGAN
+[2024-02-03 15:59] Adding extra search path upscale_models C:\Users\baileyfl\ai\stable-diffusion-webui\models/RealESRGAN
+[2024-02-03 15:59] Adding extra search path upscale_models C:\Users\baileyfl\ai\stable-diffusion-webui\models/SwinIR
+[2024-02-03 15:59] Adding extra search path embeddings C:\Users\baileyfl\ai\stable-diffusion-webui\embeddings
+[2024-02-03 15:59] Adding extra search path hypernetworks C:\Users\baileyfl\ai\stable-diffusion-webui\models/hypernetworks
+[2024-02-03 15:59] Adding extra search path controlnet C:\Users\baileyfl\ai\stable-diffusion-webui\models/ControlNet
+[2024-02-03 15:59] Adding extra search path checkpoints C:\Users\baileyfl\ai\stable-diffusion-webui\models\Stable-diffusion
+[2024-02-03 15:59] Adding extra search path clip C:\Users\baileyfl\ai\stable-diffusion-webui\models/clip/
+[2024-02-03 15:59] Adding extra search path clip_vision C:\Users\baileyfl\ai\stable-diffusion-webui\models/clip_vision/
+[2024-02-03 15:59] Adding extra search path configs C:\Users\baileyfl\ai\stable-diffusion-webui\models/configs/
+[2024-02-03 15:59] Adding extra search path controlnet C:\Users\baileyfl\ai\stable-diffusion-webui\models/controlnet/
+[2024-02-03 15:59] Adding extra search path embeddings C:\Users\baileyfl\ai\stable-diffusion-webui\models/embeddings/
+[2024-02-03 15:59] Adding extra search path loras C:\Users\baileyfl\ai\stable-diffusion-webui\models/loras/
+[2024-02-03 15:59] Adding extra search path upscale_models C:\Users\baileyfl\ai\stable-diffusion-webui\models/upscale_models/
+[2024-02-03 15:59] Adding extra search path vae C:\Users\baileyfl\ai\stable-diffusion-webui\models\VAE
+[2024-02-03 15:59] [Crystools [0;32mINFO[0m] Crystools version: 1.10.1
+[2024-02-03 15:59] [Crystools [0;32mINFO[0m] CPU: Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz - Arch: AMD64 - OS: Windows 10
+[2024-02-03 15:59] [Crystools [0;32mINFO[0m] GPU/s:
+[2024-02-03 15:59] [Crystools [0;32mINFO[0m] 0) NVIDIA GeForce GTX 1050
+[2024-02-03 15:59] [Crystools [0;32mINFO[0m] NVIDIA Driver: 537.42
+[2024-02-03 15:59] ### Loading: ComfyUI-Impact-Pack (V4.66.1)
+[2024-02-03 15:59] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.4)
+[2024-02-03 15:59] [Impact Pack] Wildcards loading done.
+[2024-02-03 15:59] ### Loading: ComfyUI-Manager (V1.26)
+[2024-02-03 15:59] ### ComfyUI Revision: 1929 [b9911dcb] | Released on '2024-01-23'
+[2024-02-03 15:59] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-02-03 15:59] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-02-03 15:59] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-02-03 15:59] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-02-03 15:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-02-03 15:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-02-03 15:59] --------------
+[2024-02-03 15:59] [91m ### Mixlab Nodes: [93mLoaded
+[2024-02-03 15:59] LaMaInpainting.available True
+[2024-02-03 15:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-02-03 15:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-02-03 15:59] [Crystools [0;31mERROR[0m] For some reason, pynvml is not working in a laptop with only battery, try to connect and turn on the monitor
+[2024-02-03 15:59] [Crystools [0;31mERROR[0m] Monitor of GPU is turning off (not on UI!)
+WARNING:tensorflow:From C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+[2024-02-03 15:59] ## clip_interrogator_model not found: C:\ComfyUI_windows_portable\ComfyUI\models\clip_interrogator/Salesforce/blip-image-captioning-base, pls download from https://huggingface.co/Salesforce/blip-image-captioning-base
+[2024-02-03 15:59] ClipInterrogator.available True
+[2024-02-03 15:59] PromptGenerate.available True
+[2024-02-03 15:59] ChinesePrompt.available True
+[2024-02-03 15:59] #pip install rembg[gpu]
+[2024-02-03 16:00] #install error
+[2024-02-03 16:00] RembgNode_.available False
+[2024-02-03 16:00] [93m -------------- [0m
+[2024-02-03 16:00] [INFO] PromptControl: Use STYLE:weight_interpretation:normalization at the start of a prompt to use advanced encodings
+[2024-02-03 16:00] [INFO] PromptControl: Weight interpretations available: comfy,perp
+[2024-02-03 16:00] [INFO] PromptControl: Normalization types available: none
+[2024-02-03 16:00] Total VRAM 4096 MB, total RAM 24450 MB
+[2024-02-03 16:00] Trying to enable lowvram mode because your GPU seems to have 4GB or less. If you don't want this use: --normalvram
+[2024-02-03 16:00] Forcing FP16.
+[2024-02-03 16:00] Set vram state to: LOW_VRAM
+[2024-02-03 16:00] Device: cuda:0 NVIDIA GeForce GTX 1050 : cudaMallocAsync
+[2024-02-03 16:00] VAE dtype: torch.float32
+[2024-02-03 16:00] Traceback (most recent call last):
+  File "C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\insightface\__init__.py", line 8, in <module>
+    import onnxruntime
+  File "C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\onnxruntime\__init__.py", line 57, in <module>
+    raise import_capi_exception
+  File "C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\onnxruntime\__init__.py", line 45, in <module>
+    from onnxruntime.capi._pybind_state import has_collective_ops  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'has_collective_ops' from 'onnxruntime.capi._pybind_state' (C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\onnxruntime\capi\_pybind_state.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ComfyUI_windows_portable\ComfyUI\nodes.py", line 1872, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node\__init__.py", line 25, in <module>
+    from .nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+  File "C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node\nodes.py", line 14, in <module>
+    from scripts.reactor_faceswap import FaceSwapScript, get_models, get_current_faces_model, analyze_faces
+  File "C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node\scripts\reactor_faceswap.py", line 12, in <module>
+    from scripts.reactor_logger import logger
+  File "C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node\scripts\reactor_logger.py", line 6, in <module>
+    from reactor_utils import addLoggingLevel
+  File "C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node\reactor_utils.py", line 8, in <module>
+    from insightface.app.common import Face
+  File "C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\insightface\__init__.py", line 10, in <module>
+    raise ImportError(
+ImportError: Unable to import dependency onnxruntime. 
+[2024-02-03 16:00] 
+[2024-02-03 16:00] Cannot import C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node module for custom nodes: Unable to import dependency onnxruntime. 
+[2024-02-03 16:00] [36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui_controlnet_aux\ckpts[0m
+[2024-02-03 16:00] [36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[2024-02-03 16:00] [36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+[2024-02-03 16:00] C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui_controlnet_aux\node_wrappers\dwpose.py:26: UserWarning: DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly
+  warnings.warn("DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly")
+[2024-02-03 16:00] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[2024-02-03 16:00] 
+Import times for custom nodes:
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\cg-image-picker
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\cg_custom_core
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\masquerade-nodes-comfyui
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Image-Selector
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI_Cutoff
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI_IPAdapter_plus
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfy-image-saver
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Advanced-ControlNet
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI_UltimateSDUpscale
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\efficiency-nodes-comfyui
+[2024-02-03 16:00]    0.0 seconds (IMPORT FAILED): C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-reactor-node
+[2024-02-03 16:00]    0.0 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI_essentials
+[2024-02-03 16:00]    0.1 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\facerestore_cf
+[2024-02-03 16:00]    0.1 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-prompt-control
+[2024-02-03 16:00]    0.1 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyI2I
+[2024-02-03 16:00]    0.3 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-KJNodes
+[2024-02-03 16:00]    0.4 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Manager
+[2024-02-03 16:00]    0.7 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui_controlnet_aux
+[2024-02-03 16:00]    0.9 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Impact-Pack
+[2024-02-03 16:00]    2.8 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui_segment_anything
+[2024-02-03 16:00]    2.8 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Crystools
+[2024-02-03 16:00]   15.6 seconds: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-mixlab-nodes
+[2024-02-03 16:00] 
+[2024-02-03 16:00] https_key OK:  C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-mixlab-nodes\https\certificate.crt C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-mixlab-nodes\https\private.key
+[2024-02-03 16:00] [93mStarting server
+[2024-02-03 16:00] 
+[2024-02-03 16:00] [93mTo see the GUI go to: http://0.0.0.0:8188
+[2024-02-03 16:00] [93mTo see the GUI go to: https://0.0.0.0:8189[0m
+[2024-02-03 16:10] got prompt
+[2024-02-03 16:10] model_type EPS
+[2024-02-03 16:10] adm 0
+[2024-02-03 16:10] Using pytorch attention in VAE
+[2024-02-03 16:10] Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+[2024-02-03 16:10] Using pytorch attention in VAE
+[2024-02-03 16:10] missing {'cond_stage_model.clip_l.text_projection', 'cond_stage_model.clip_l.logit_scale'}
+[2024-02-03 16:10] left over keys: dict_keys(['alphas_cumprod', 'alphas_cumprod_prev', 'betas', 'log_one_minus_alphas_cumprod', 'posterior_log_variance_clipped', 'posterior_mean_coef1', 'posterior_mean_coef2', 'posterior_variance', 'sqrt_alphas_cumprod', 'sqrt_one_minus_alphas_cumprod', 'sqrt_recip_alphas_cumprod', 'sqrt_recipm1_alphas_cumprod', 'cond_stage_model.clip_l.transformer.text_model.embeddings.position_ids'])
+[2024-02-03 16:10] Requested to load SD1ClipModel
+[2024-02-03 16:10] Loading 1 new model
+[2024-02-03 16:10] [] []
+[2024-02-03 16:10] WARNING:comfyui_segment_anything:using extra model: C:\ComfyUI_windows_portable\ComfyUI\models\sams\sam_vit_b_01ec64.pth
+[2024-02-03 16:10] final text_encoder_type: bert-base-uncased
+[2024-02-03 16:10] C:\ComfyUI_windows_portable\python_embeded\Lib\site-packages\transformers\modeling_utils.py:942: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+[2024-02-03 16:10] Using pytorch attention in VAE
+[2024-02-03 16:10] Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+[2024-02-03 16:10] Using pytorch attention in VAE
+[2024-02-03 16:10] Leftover VAE keys ['model_ema.decay', 'model_ema.num_updates']
+[2024-02-03 16:10] Requested to load AutoencoderKL
+[2024-02-03 16:10] Loading 1 new model
+[2024-02-03 16:10] Requested to load BaseModel
+[2024-02-03 16:10] Requested to load ControlNet
+[2024-02-03 16:10] Loading 2 new models
+[2024-02-03 16:10] loading in lowvram mode 972.3646993637085
+[2024-02-03 16:10] loading in lowvram mode 224.39200592041016
+[2024-02-03 16:11] 100%|██████████████████████████████████████████████████████████| 23/23 [01:09<00:00,  3.04s/it]100%|██████████████████████████████████████████████████████████| 23/23 [01:09<00:00,  3.04s/it]
+[2024-02-03 16:11] Requested to load AutoencoderKL
+[2024-02-03 16:11] Loading 1 new model
+[2024-02-03 16:11] Prompt executed in 86.75 seconds
+[2024-02-03 16:16] FETCH DATA from: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Manager\extension-node-map.json
+[2024-02-03 16:16] #read_workflow_json_files_all C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-mixlab-nodes\app\
+[2024-02-03 16:48] FETCH DATA from: C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Manager\extension-node-map.json
+[2024-02-03 16:48] #read_workflow_json_files_all C:\ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui-mixlab-nodes\app\
+[2024-02-03 16:55] got prompt
+[2024-02-03 16:55] [] []
+[2024-02-03 16:55] Requested to load SD1ClipModel
+[2024-02-03 16:55] Loading 1 new model
+[2024-02-03 16:55] Using pytorch attention in VAE
+[2024-02-03 16:55] Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+[2024-02-03 16:55] Using pytorch attention in VAE
+[2024-02-03 16:55] Leftover VAE keys ['model_ema.decay', 'model_ema.num_updates']
+[2024-02-03 16:55] ----------------------------------------
+[2024-02-03 16:55] [36mEfficient Loader Models Cache:[0m
+[2024-02-03 16:55] Ckpt:
+[2024-02-03 16:55]   [1] dreamshaper_8
+[2024-02-03 16:55] Vae:
+[2024-02-03 16:55]   [1] vae-ft-mse-840000-ema-pruned
+[2024-02-03 16:55] Requested to load BaseModel
+[2024-02-03 16:55] Requested to load ControlNet
+[2024-02-03 16:55] Loading 2 new models
+[2024-02-03 16:55] loading in lowvram mode 486.5838899612427
+[2024-02-03 16:55] got prompt
+[2024-02-03 16:55] 
+[2024-02-03 16:55] Prompt executed in 44.58 seconds
+[2024-02-03 16:55] Requested to load SD1ClipModel
+[2024-02-03 16:55] Loading 1 new model
+[2024-02-03 16:55] ----------------------------------------
+[2024-02-03 16:55] [36mEfficient Loader Models Cache:[0m
+[2024-02-03 16:55] Ckpt:
+[2024-02-03 16:55]   [1] dreamshaper_8
+[2024-02-03 16:55] Vae:
+[2024-02-03 16:55]   [1] vae-ft-mse-840000-ema-pruned
+[2024-02-03 16:55] Requested to load ControlNet
+[2024-02-03 16:55] Loading 1 new model
+[2024-02-03 16:55] loading in lowvram mode 485.045428276062
+[2024-02-03 16:58] 100%|██████████████████████████████████████████████████████████| 23/23 [02:24<00:00,  5.27s/it]100%|██████████████████████████████████████████████████████████| 23/23 [02:24<00:00,  6.27s/it]
+[2024-02-03 16:58] Requested to load AutoencoderKL
+[2024-02-03 16:58] Loading 1 new model
+[2024-02-03 16:58] Prompt executed in 147.95 seconds
+[2024-02-03 16:59] got prompt
+[2024-02-03 16:59] Requested to load SD1ClipModel
+[2024-02-03 16:59] Loading 1 new model
+[2024-02-03 16:59] ----------------------------------------
+[2024-02-03 16:59] [36mEfficient Loader Models Cache:[0m
+[2024-02-03 16:59] Ckpt:
+[2024-02-03 16:59]   [1] dreamshaper_8
+[2024-02-03 16:59] Vae:
+[2024-02-03 16:59]   [1] vae-ft-mse-840000-ema-pruned
+[2024-02-03 16:59] Requested to load BaseModel
+[2024-02-03 16:59] Requested to load ControlNet
+[2024-02-03 16:59] Loading 2 new models
+[2024-02-03 16:59] loading in lowvram mode 485.045428276062
+[2024-02-03 17:00] 100%|██████████████████████████████████████████████████████████| 23/23 [01:15<00:00,  3.25s/it]100%|██████████████████████████████████████████████████████████| 23/23 [01:15<00:00,  3.26s/it]
+[2024-02-03 17:00] Requested to load AutoencoderKL
+[2024-02-03 17:00] Loading 1 new model
+[2024-02-03 17:00] Prompt executed in 79.61 seconds
+[2024-02-03 17:01] got prompt
+[2024-02-03 17:01] Requested to load SD1ClipModel
+[2024-02-03 17:01] Loading 1 new model
+[2024-02-03 17:01] ----------------------------------------
+[2024-02-03 17:01] [36mEfficient Loader Models Cache:[0m
+[2024-02-03 17:01] Ckpt:
+[2024-02-03 17:01]   [1] realcartoon3d_v13
+[2024-02-03 17:01] Vae:
+[2024-02-03 17:01]   [1] vae-ft-mse-840000-ema-pruned
+[2024-02-03 17:01] Requested to load BaseModel
+[2024-02-03 17:01] Requested to load ControlNet
+[2024-02-03 17:01] Loading 2 new models
+[2024-02-03 17:01] loading in lowvram mode 485.045428276062
+[2024-02-03 17:01] 
+[2024-02-03 17:01] Prompt executed in 50.37 seconds
+[2024-02-03 17:02] 
+Stopped server

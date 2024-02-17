@@ -1,0 +1,201 @@
+{
+  "49": {
+    "inputs": {
+      "image": "ComfyUI_temp_mtvid_00007_ (2).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "51": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": [
+        "64",
+        0
+      ],
+      "control_net": [
+        "52",
+        0
+      ],
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "52": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_inpaint_fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "53": {
+    "inputs": {
+      "image": [
+        "49",
+        0
+      ],
+      "mask": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "InpaintPreprocessor"
+  },
+  "61": {
+    "inputs": {
+      "seed": 367675318511623,
+      "steps": 20,
+      "cfg": 6.7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "63",
+        0
+      ],
+      "positive": [
+        "51",
+        0
+      ],
+      "negative": [
+        "65",
+        0
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "63": {
+    "inputs": {
+      "ckpt_name": "cyberrealistic_v41BackToBasics.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "64": {
+    "inputs": {
+      "text": "topless, nsfw, nude, ",
+      "clip": [
+        "63",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "65": {
+    "inputs": {
+      "text": "(embedding:EasyNegativeV2:1.0), (git tits:0.5), underwear, panties, jeans, sfw,",
+      "clip": [
+        "63",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "66": {
+    "inputs": {
+      "samples": [
+        "61",
+        0
+      ],
+      "vae": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "68": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "69": {
+    "inputs": {
+      "expand": 15,
+      "incremental_expandrate": 0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": 5,
+      "lerp_alpha": 1,
+      "decay_factor": 1,
+      "mask": [
+        "58:2",
+        1
+      ]
+    },
+    "class_type": "GrowMaskWithBlur"
+  },
+  "81": {
+    "inputs": {
+      "pixels": [
+        "49",
+        0
+      ],
+      "vae": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "86": {
+    "inputs": {
+      "samples": [
+        "81",
+        0
+      ],
+      "mask": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask"
+  },
+  "87": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "58:0": {
+    "inputs": {
+      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+    },
+    "class_type": "GroundingDinoModelLoader (segment anything)"
+  },
+  "58:1": {
+    "inputs": {
+      "model_name": "sam_vit_b (375MB)"
+    },
+    "class_type": "SAMModelLoader (segment anything)"
+  },
+  "58:2": {
+    "inputs": {
+      "prompt": "clothes, underwear, panties",
+      "threshold": 0.3,
+      "sam_model": [
+        "58:1",
+        0
+      ],
+      "grounding_dino_model": [
+        "58:0",
+        0
+      ],
+      "image": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "GroundingDinoSAMSegment (segment anything)"
+  }
+}
